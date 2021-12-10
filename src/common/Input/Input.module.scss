@@ -1,0 +1,128 @@
+@import '../../variables.scss';
+
+@mixin labelTextOverflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-width: 70%;
+}
+
+.box{
+    flex-grow: 1;
+    position: relative;
+    z-index: 5;
+}
+
+.box__error{
+    .input{
+        border-color: $red;
+        &:focus{
+            ~ .border{
+                opacity: 1;
+                border-color: $red;
+            }
+            ~ .label{
+                color: $red;
+                padding: 0px 3px;
+                left: 5px;
+                transform: scale(.75) translateY(-192%);
+                background-color: $white;
+                @include labelTextOverflow;
+
+            }
+        }
+        &:not(:placeholder-shown) {
+            ~ .label{
+                padding: 0px 3px;
+                left: 5px;
+                transform: scale(.75) translateY(-192%);
+                background-color: $white;
+                @include labelTextOverflow;
+            }
+        }
+    }
+}
+
+.input{
+    width: 100%;
+    height: 35px;
+    padding: 6px 8px;
+    outline: none;
+    border-radius: 4px;
+    border: $primary-border;
+    &:focus{
+        ~ .border{
+            opacity: 1;
+        }
+        ~ .label{
+            color: $accent;
+            padding: 0px 3px;
+            left: 5px;
+            transform: scale(.75) translateY(-192%);
+            background-color: $white;
+            @include labelTextOverflow;
+        }
+    }
+    &:not(:placeholder-shown) {
+        ~ .label{
+            padding: 0px 3px;
+            left: 5px;
+            transform: scale(.75) translateY(-192%);
+            background-color: $white;
+            @include labelTextOverflow;
+        }
+    }
+}
+
+.label{
+    pointer-events: none;
+    font-size: 16px;
+    color: $text-grey;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    transform-origin: left;
+    transition: $fst-transition;
+    z-index: 2;
+}
+
+.border{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    border: $accent-border;
+    border-width: 2px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: $fst-transition;
+}
+
+.note{
+    position: absolute;
+    top: 105%;
+    left: 8px;
+    font-size: 12px;
+}
+
+.info{
+    color: $text-grey;
+    font-weight: 400;
+}
+
+.error{
+    color: $red;
+    display: flex;
+    align-items: center;
+    svg{
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+    }
+}

@@ -1,0 +1,10 @@
+@import '../variables.scss';
+
+.form{
+    width: 750px;
+    padding: 48px 40px 36px 40px;
+    height: auto;
+    min-height: 500px;
+    border-radius: 8px;
+    border: $primary-border;
+}

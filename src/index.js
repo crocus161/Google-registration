@@ -1,11 +1,15 @@
+import './index.scss';
 import React from 'react';
+import App from './app/App';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App/App';
+import { BrowserRouter } from 'react-router-dom';
+import DataProvider from './context/DataContext';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
+    <BrowserRouter>
+        <DataProvider>
+            <App />
+        </DataProvider>
+    </BrowserRouter>,
     document.getElementById('root')
 );

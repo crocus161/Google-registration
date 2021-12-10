@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.button{
+    margin-top: 25px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: $fst-transition;
+}
+
+.fill{
+    color: $white;
+    background: $accent;
+    &:hover{
+        background: darken($accent, 10%);
+    }
+}
+.primary{
+    color: $accent;
+    background: $white;
+    &:hover{
+        color: darken($accent, 15%);
+        background: rgba($accent, 0.1);
+    }
+}
