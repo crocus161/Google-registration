@@ -1,10 +1,12 @@
 @import '../variables.scss';
 
 .form{
+    overflow: hidden;
     width: 750px;
     padding: 48px 40px 36px 40px;
-    height: auto;
     min-height: 500px;
+    height: auto;
     border-radius: 8px;
     border: $primary-border;
+    position: relative;
 }

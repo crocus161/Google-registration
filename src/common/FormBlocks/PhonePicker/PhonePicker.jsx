@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Input from '../Input/Input';
 import styles from './PhonePicker.module.scss';
-import Input from '../../../common/Input/Input';
 
-const PhonePicker = ({register, errors}) => {
+const PhonePicker = ({register, errors, label, name, countryName}) => {
     return (
         <div className={styles.line}>
-            <select {...register('country')} className={styles.select}>
+            <select {...register(countryName)} className={styles.select}>
                 <option value="UK">🇺🇦 Украина (+380)</option>
                 <option value="AU">🇦🇺 Австралия (+61)</option>
                 <option value="AT">🇦🇹 Австрия (+43)</option>
@@ -16,7 +16,7 @@ const PhonePicker = ({register, errors}) => {
                 <option value="AI">🇦🇮 Ангилья (+1)</option>
             </select>
 
-            <Input errors={errors} register={register} label='Номер телефона' name='phone' type='tel' />
+            <Input errors={errors} register={register} label={label} name={name} type='tel' />
         </div>
     )
 }

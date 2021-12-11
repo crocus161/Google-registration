@@ -1,9 +1,9 @@
-import { ReactComponent as WarningIcon } from '../../assets/warning.svg';
-import styles from './Input.module.scss';
 import React from 'react';
+import styles from './Input.module.scss';
+import { ReactComponent as WarningIcon } from '../../../assets/warning.svg';
 
-const Input = ({ label, register, name, errors, info, ...props }) => {
-    const error = errors?.[name];
+const Input = ({ label, register, name, errors, info, associative, ...props }) => {
+    const error = associative ? errors : errors?.[name];
     return (
         <div className={`${styles.box} ${!!error && styles.box__error}`}>
 

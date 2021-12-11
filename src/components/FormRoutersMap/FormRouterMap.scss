@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+
+.slide-enter,
+.slide-exit {
+    transition: $md-transition;
+}
+
+.slide-enter {
+    position: static;
+    transform: translateX(100%);
+}
+
+.slide-enter-active {
+    transform: translateX(0%);
+}
+
+.slide-exit {
+    position: absolute;
+    top: 48px;
+    left: 40px;
+    width: 100%;
+    background: $white;
+    transform: translateX(0%);
+}
+
+.slide-exit.slide-exit-active {
+    transform: translateX(-120%);
+}
