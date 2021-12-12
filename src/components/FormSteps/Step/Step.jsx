@@ -8,7 +8,7 @@ import ButtonGroup from '../../../common/FormBlocks/ButtonGroup/ButtonGroup';
 
 const Step = ({title, children, handleSubmit, path, isFirst}) => {
     const {setValues} = useData();
-    const navigate = useNavigate(path);
+    const navigate = useNavigate();
 
     const submit = data => {
         setValues(data);
