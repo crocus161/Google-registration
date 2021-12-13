@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is available now on this [page](https://auth-clone-9b3b1.web.app/form/step1).
 
 ## Available Scripts
 
