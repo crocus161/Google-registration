@@ -15,13 +15,14 @@ const FormRoutersMap = () => {
         <TransitionGroup component={null}>
             <CSSTransition key={location.key} classNames='slide' timeout={550}>
                 <Routes location={location}>
-                    <Route path='/form/step1' element={<Step1 />} exact />
-                    <Route path='/form/step2' element={<Step2 />} exact />
-                    <Route path='/form/step3' element={<Step3 />} exact />
-                    <Route path='/form/step4' element={<Step4/>} exact />
-                    <Route path='/form/result' element={<Result />} exact />
+                    <Route path='/form/step1' element={<Step1 />} end />
+                    <Route path='/form/step2' element={<Step2 />} end />
+                    <Route path='/form/step3' element={<Step3 />} end />
+                    <Route path='/form/step4' element={<Step4/>} end />
+                    <Route path='/form/result' element={<Result />} end />
 
                     <Route path='/form' element={<Navigate to='/form/step1' />} />
+                    <Route path='/' element={<Navigate to='/form/step1' />} />
                 </Routes>
             </CSSTransition>
         </TransitionGroup>

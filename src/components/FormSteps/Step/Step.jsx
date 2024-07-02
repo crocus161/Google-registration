@@ -3,7 +3,7 @@ import styles from './Step.module.scss';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../../common/Button/Button';
 import { useData } from '../../../context/DataContext';
-import {ReactComponent as LogoIcon} from '../../../assets/logo.svg';
+import LogoIcon from '../../../assets/logo.svg?react';
 import ButtonGroup from '../../../common/FormBlocks/ButtonGroup/ButtonGroup';
 
 const Step = ({title, children, handleSubmit, path, isFirst}) => {

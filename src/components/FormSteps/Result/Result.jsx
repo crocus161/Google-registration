@@ -5,10 +5,10 @@ import PrevButton from '../../../common/FormBlocks/PrevButton/PrevButton';
 
 const Result = () => {
     const { data } = useData();
-    console.log(JSON.stringify(data, null, '\t'));
+
     return (
         <div className={styles.result}>
-            <h2>Go to console</h2>
+            <p>{JSON.stringify(data, null, '\t')}</p>
             <PrevButton />
         </div>
     )

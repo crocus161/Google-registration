@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useData } from '../../../context/DataContext';
 import Input from '../../../common/FormBlocks/Input/Input';
-import { ReactComponent as AvaIcon } from '../../../assets/ava.svg';
+import AvaIcon from '../../../assets/ava.svg?react';
 import PhonePicker from '../../../common/FormBlocks/PhonePicker/PhonePicker';
 import AddressPicker from '../../../common/FormBlocks/AddressPicker/AddressPicker';
 

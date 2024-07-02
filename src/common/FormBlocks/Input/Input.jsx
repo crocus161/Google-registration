@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Input.module.scss';
-import { ReactComponent as WarningIcon } from '../../../assets/warning.svg';
+import WarningIcon from '../../../assets/warning.svg?react';
 
 const Input = ({ label, register, name, errors, info, associative, ...props }) => {
     const error = associative ? errors : errors?.[name];
